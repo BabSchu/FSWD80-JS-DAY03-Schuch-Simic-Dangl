@@ -1,0 +1,53 @@
+body {
+	font-family: arial;
+}
+
+
+#banner {
+ 	position: relative;
+ 	margin-bottom: 20px;
+}
+
+#banner img {
+ 	width: 100%;
+}
+
+#banner h1 {
+ 	position: absolute;
+ 	top: 40%;
+ 	width: 100%;
+ 	margin: 0 auto;
+ 	text-align: center;
+ 	display: block;
+ 	color: white;
+ 	text-transform: uppercase;
+ 	font-size: 2.3em;
+}
+
+#shoppinglist div {
+	width: 15%;
+	text-align: center;
+}
+
+#shoppinglist img {
+	width: 100%;
+
+}
+
+#shoppinglist {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#shoppinglist button {
+	background-color: red;
+	border: 1px solid red;
+	border-radius: 15%;
+	padding: 5px 10px;
+	margin-top: 10px;
+}
+
+#shoppinglist button:hover {
+	box-shadow: 5px 5px 5px grey;
+}
