@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+		#weatherimg {
+			width: 40%;
+			text-align: center;
+			margin: 0 auto;
+			border: 1px solid black;
+			border-radius: 10%;
+			box-shadow: 5px 5px 5px darkgray;
+		}
+
+		img {
+			width: 60%;
+		}
+
+		p {
+			font-family: arial;
+			font-weight: bold;
+			font-size: 2em;
+			padding: 10px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id=weatherimg>
+	<p id="text"></p>
+	<img id="myImage" src=" " alt="">
+</div>
+
+<script>
+
+/*Basic Exersice 1:
+
+Create a program that according to the temperature will provide you with the information, whether the weather is cold or moderate. This program should generate a different random number every time, that should be between -5c and 25c. If the temperature is between -5c and 10c print "The weather is cold" otherwise print "The weather is moderate". */
+
+var temp = Math.floor(Math.random()*31)-6;
+	
+	if (temp <= 10) {
+  message = "The weather is cold.";
+} else {
+  message = "The weather is moderate.";
+}
+
+document.write("The Temperature is" + temp + " degree celsius");
+document.write("<br>");
+document.write(message);
+document.write("<br>");
+
+/*Variation if you want to choose your favorite temp*/
+
+/*var temp2 = prompt ("Please enter your favorite temperature :-)");
+	
+	if (temp2 <= 10) {
+  message2 = "The weather is cold.";
+} else {
+  message2 = "The weather is moderate.";
+}
+
+document.write("The Temperature is" + temp2 + " degree celsius");
+document.write("<br>");
+document.write(message2);
+document.write("<br>");*/
+
+/*Basic Exercise 2 | Highest value in an array
+Create a JavaScript function to find the highest value in an array. 
+
+E.g. If we have the following values 1, 7, -3, 9 we should only get the highest value, number 9.*/
+
+/*document.write(Math.max(1, 7, -3, 9));*/
+
+var numbers = [1, 7, -3, 9];
+
+var highestNumber = 0;
+
+for (i = 0; i < numbers.length; i++) {
+
+	if (numbers[i] > highestNumber){
+
+		highestNumber = numbers[i] ;
+	} 
+}
+
+document.write (numbers.length);
+document.write("<br>");
+document.write(highestNumber);
+document.write("<br>");
+
+
+/*Basic Exercise 3 | Product
+Create a JavaScript function to calculate the product of the values in an array. You can have as many values in an array as you want.
+
+E.g. If we pass the following values 1, 3, 7, 10, 2 we should get the number 420 printed on the screen.*/
+
+var numbers2 = [1, 3, 7, 10, 2];
+
+var product = numbers2[0];
+
+for (i = 0; i < numbers2.length; i++) {
+
+	product *= numbers2[i];
+
+}
+
+document.write("<br>");
+
+document.write(product);
+document.write("<br>");
+
+// Basic Exercise 4 | Temperature v2.0
+// Now when you have program Temperature v1.0 done it time to upgrade it to the version 2.0. Now you should create a nice looking responsive front-end for your program (mobile friendly) and create more messages (e.g. if the temperature is above 32c output "The weather is hot" etc.) and you should display a proper image for the current weather condition.
+
+var temp = Math.floor(Math.random()*40)-6;
+	
+if (temp <= 10) {
+  	document.getElementById('myImage').src='snow.png';
+  	document.getElementById('text').innerHTML = "The Temperature is " + temp + " degree(s). The weather is cold";
+} 
+else if (temp<=30) {
+	document.getElementById('myImage').src='jacket.png';
+	document.getElementById('text').innerHTML = "The Temperature is " + temp + " degree(s). Take a jacket and you will be fine";
+}
+else {
+	document.getElementById('myImage').src='sun.png';
+	document.getElementById('text').innerHTML = "The Temperature is " + temp + " degrees. The weather is hot";
+}
+
+
+
+</script>
+
+</body>
+</html>
